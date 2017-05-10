@@ -1,0 +1,16 @@
+--- a/osquery/remote/transports/tls.cpp
++++ b/osquery/remote/transports/tls.cpp
+@@ -90,10 +90,6 @@ http::client TLSTransport::getClient() {
+   options.follow_redirects(true).always_verify_peer(verify_peer_).timeout(16);
+ 
+   std::string ciphers = kTLSCiphers;
+-  if (!isPlatform(PlatformType::TYPE_OSX)) {
+-    // Otherwise we prefer GCM and SHA256+
+-    ciphers += ":!CBC:!SHA";
+-  }
+ 
+ #if defined(DEBUG)
+   // Configuration may allow unsafe TLS testing if compiled as a debug target.
+-- 
+2.12.2
+
