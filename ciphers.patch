@@ -1,3 +1,9 @@
+---
+ osquery/remote/transports/tls.cpp | 4 ----
+ 1 file changed, 4 deletions(-)
+
+diff --git a/osquery/remote/transports/tls.cpp b/osquery/remote/transports/tls.cpp
+index 807e439d..8e86c033 100644
 --- a/osquery/remote/transports/tls.cpp
 +++ b/osquery/remote/transports/tls.cpp
 @@ -90,10 +90,6 @@ http::client TLSTransport::getClient() {
